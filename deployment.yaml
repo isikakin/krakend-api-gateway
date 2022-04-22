@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krakend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: krakend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: krakend
+    spec:
+      containers:
+      - name: krakend
+        image: krakend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        command: [ "/usr/bin/krakend" ]
+        args: [ "run", "-d", "-c", "/etc/krakend/sample.json", "-p", "8080" ]
+        env:
+        - name: KRAKEND_PORT
+          value: "8080"

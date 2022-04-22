@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: krakend-ing
+  namespace: default
+spec:
+  rules:
+    - host: krakend.internal
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: krakend-service
+              servicePort: 8000
