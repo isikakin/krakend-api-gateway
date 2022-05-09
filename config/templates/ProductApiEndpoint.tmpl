@@ -14,9 +14,7 @@
             "sd": "static",
             "method": "GET",
             "extra_config": {},
-            "host": [
-                "http://host.docker.internal:5001"
-            ],
+            "host": ["{{ $host }}"],
             "disable_host_sanitize": true
         }
     ]
@@ -34,9 +32,7 @@
             "sd": "static",
             "method": "POST",
             "extra_config": {},
-            "host": [
-                "http://host.docker.internal:5001"
-            ],
+            "host": ["{{ $host }}"],
             "disable_host_sanitize": true
         }
     ]

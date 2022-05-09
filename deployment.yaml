@@ -16,10 +16,3 @@ spec:
       - name: krakend
         image: krakend:latest
         imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 8080
-        command: [ "/usr/bin/krakend" ]
-        args: [ "run", "-d", "-c", "/etc/krakend/sample.json", "-p", "8080" ]
-        env:
-        - name: KRAKEND_PORT
-          value: "8080"

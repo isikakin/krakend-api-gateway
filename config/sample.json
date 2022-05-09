@@ -4,8 +4,5 @@
     "cache_ttl": "3600s",
     "timeout": "45s",
     "extra_config": {},
-    "endpoints": [
-
-            {{ template "Endpoint" .service}}
-    ]
+    "endpoints": [{{ template "Endpoint" .service }}]
 }

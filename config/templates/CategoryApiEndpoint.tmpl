@@ -14,9 +14,7 @@
             "sd": "static",
             "method": "GET",
             "extra_config": {},
-            "host": [
-                "http://host.docker.internal:5000"
-            ],
+            "host": ["{{ $host }}"],
             "disable_host_sanitize": true
         }
     ]
@@ -34,9 +32,7 @@
             "sd": "static",
             "method": "GET",
             "extra_config": {},
-            "host": [
-                "http://host.docker.internal:5000"
-            ],
+            "host": ["{{ $host }}"],
             "disable_host_sanitize": true
         }
     ]
@@ -54,9 +50,7 @@
             "sd": "static",
             "method": "POST",
             "extra_config": {},
-            "host": [
-                "http://host.docker.internal:5000"
-            ],
+            "host": ["{{ $host }}"],
             "disable_host_sanitize": true
         }
     ]
@@ -73,9 +67,7 @@
             "sd": "static",
             "method": "PUT",
             "extra_config": {},
-            "host": [
-                "http://host.docker.internal:5000"
-            ],
+            "host": ["{{ $host }}"],
             "disable_host_sanitize": true
         }
     ]
@@ -92,9 +84,7 @@
             "sd": "static",
             "method": "DELETE",
             "extra_config": {},
-            "host": [
-                "http://host.docker.internal:5000"
-            ],
+            "host": ["{{ $host }}"],
             "disable_host_sanitize": true
         }
     ]

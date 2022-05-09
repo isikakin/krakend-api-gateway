@@ -11,4 +11,4 @@ spec:
           - path: /
             backend:
               serviceName: krakend-service
-              servicePort: 8000
+              servicePort: 80
